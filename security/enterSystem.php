@@ -6,7 +6,7 @@
 	
 	include "../database/connection.php";
 	
-	$sql_userSearch = "select * from users where username='".$_POST['fUser']."' OR email ='".$_POST['fUser']."'  and password='".$_POST['fPassword']."'";
+	$sql_userSearch = "select * from users where (username='".$_POST['fUser']."' and password='".$_POST['fPassword']."') OR (email ='".$_POST['fUser']."'  and password='".$_POST['fPassword']."')";
 	$result = mysqli_query($connection, $sql_userSearch);
 	$result_lines = mysqli_num_rows($result);
 	
