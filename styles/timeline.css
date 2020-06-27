@@ -1,0 +1,15 @@
+.containerBody{
+  display: flex;
+}
+
+.containerBody .leftBody{
+  border: 1px solid black;
+}
+
+.containerBody .centerBody{
+  border: 1px solid black;
+}
+
+.containerBody .rightBody{
+  border: 1px solid black;
+}
