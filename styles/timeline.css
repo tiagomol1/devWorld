@@ -1,15 +1,241 @@
 .containerBody{
+  margin-top: 20px;
   display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.containerBody fieldset{
+  border-radius: 4px;
 }
 
 .containerBody .leftBody{
-  border: 1px solid black;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.containerBody .centerBody{
-  border: 1px solid black;
+.containerBody .leftBody .fieldsetVacancies {
+  width: 95%;
+  height: 230px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+.containerBody .leftBody .fieldsetBirthdays {
+  width: 95%;
+  height: 100px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+.containerBody .leftBody .fieldsetRank {
+  width: 95%;
+  height: 200px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+.containerBody .leftBody .fieldsetA {
+  width: 95%;
+  height: 230px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+.containerBody .leftBody fieldset legend {
+  font-size: 1.1em !important;
+  text-align: left !important;
+  font: 400 14px Open Sans, sans-serif;
+  width: auto;
+  padding: 0 10px;
+  border-bottom: none;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px -4px 10px 1px #d4d3d3;
 }
 
 .containerBody .rightBody{
-  border: 1px solid black;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerBody .rightBody .fieldsetProjects {
+  width: 95%;
+  height: 272px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+.containerBody .rightBody .fieldsetCommunities {
+  width: 95%;
+  height: 273px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  padding: 0 1em 1em 1em !important;
+  margin: 0 0 1em 0 !important;
+  border: white;
+}
+
+
+.containerBody .rightBody fieldset legend {
+  font-size: 1.1em !important;
+  font: 400 14px Open Sans, sans-serif;
+  text-align: left !important;
+  width: auto;
+  padding: 0 10px;
+  border-bottom: none;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px -4px 10px 1px #d4d3d3;
+}
+
+.containerBody .centerBody{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.containerBody .centerBody .publishingArea{
+  width: 95%;
+  height: 180px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px 6px #d4d3d3;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerBody .centerBody .publishingArea textarea{
+  margin: 15px;
+  font: 400 14px Open Sans, sans-serif;
+  border-radius: 4px;
+  height: 100px;
+  border: 1px solid #d4d3d3;
+  box-shadow: inset 1px 1px 10px 3px #d4d3d3;
+  padding: 10px;
+  resize: none;
+  font-size: 15px;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions{
+  font-size: 28px;
+  margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions div{
+  display: flex;
+  align-items: center;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions div i{
+  font-size: 23px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions button{
+  font: 400 14px Open Sans, sans-serif;
+  height: 35px;
+  width: 120px;
+  margin-right: 13px;
+  font-size: 15px;
+  border: 1px solid #343A40;
+  border-radius: 5px;
+  padding: 4px;
+  padding-left: 8px;
+  cursor: pointer;
+  background-color: #343A40;
+  color: white;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions button:hover{
+  background-color: #343a4021;
+  color: black;
+  transition: 0.4s;
+}
+
+.containerBody .centerBody .publications{
+  margin-top: 20px;
+  font: 400 14px Open Sans, sans-serif;
+  border-radius: 4px;
+  width: 95%;
+  border: 1px solid #d4d3d3;
+  box-shadow: inset 1px 1px 8px 3px #d4d3d3;
+  padding: 5px;
+  resize: none;
+  font-size: 15px;
+}
+
+.containerBody .centerBody .publications .headerPublication{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.containerBody .centerBody .publications .headerPublication .imagePerfil{
+  border-radius: 50%;
+  width:50px;
+}
+
+.containerBody .centerBody .publications .headerPublication div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.containerBody .centerBody .publications .headerPublication div .publicationAuthor{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.containerBody .centerBody .publications .headerPublication div .publicationDate{
+  font-size: 12px;
+  color: grey;
+}
+
+.containerBody .centerBody .publications .bodyPublication{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.containerBody .centerBody .publications .bodyPublication hr{
+  margin-top: 10px;
+  width: 90%;
+}
+
+.containerBody .centerBody .publications .publicationReaction{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.containerBody .centerBody .publications .publicationReaction i{
+  margin-right: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.containerBody .centerBody .publications .publicationReaction i p{
+  text-align: center;
+  font: 400 12px Open Sans, sans-serif;
 }
