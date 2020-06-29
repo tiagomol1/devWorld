@@ -9,8 +9,6 @@ $email          = $_POST['emailCadastro'];
 $password1      = $_POST['password1'];
 $password2      = $_POST['password2'];
 
-
-
 if($email == '' || $password1 == '' || $password2 == ''){
     echo 'nenhum dos campos pode estar vazio!';
 }else{
