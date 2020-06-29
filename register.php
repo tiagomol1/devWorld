@@ -17,7 +17,7 @@
         <source src="assets/videos/videoLogin.mp4" type="video/mp4">
     </video>
 
-    <a href="http://localhost/devWorld/"><img src="img/volta.png" width="50px" id="volta" height="50px"></img></a>
+    <a href="http://localhost/faculdade/redesocial"><i class="fas fa-arrow-left" styles="font-size: 30px; color: white;"></i></a>
     <div class="container">
         <div class="card mt-5">
             <div class="card-body">
