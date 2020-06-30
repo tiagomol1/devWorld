@@ -13,7 +13,7 @@
 	
 	<body>
 		<div class="content">
-			<h1>Hello World!</h1>
+			<h1>DevWorld!</h1>
 			<h3><?php echo $hoje; ?></h3>
 			<div class="loginContainer">
 				<form action="security/enterSystem.php" method="post" onSubmit="return fillForm()" >

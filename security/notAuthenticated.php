@@ -13,7 +13,7 @@
 	
 	<body>
 		<div class="content">
-			<h1>Biblioteca Particular</h1>
+			<h1>DevWorld</h1>
 			<h3><?php echo $hoje; ?></h3>
 			<div class="loginErrorContainer">
 				<h3> Rota não acessível! </h3>
