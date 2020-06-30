@@ -143,11 +143,23 @@
   align-items: center;
 }
 
-.containerBody .centerBody .publishingArea .publishingOptions div i{
+
+.containerBody .centerBody .publishingArea .publishingOptions div label{
+  display: flex;
+  flex-direction: row;
+}
+
+.containerBody .centerBody .publishingArea .publishingOptions div label i{
   font-size: 23px;
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
 }
+
+.containerBody .centerBody .publishingArea .publishingOptions div p{
+  font-size: 14px;
+  margin-left: 3px;
+}
+
 
 .containerBody .centerBody .publishingArea .publishingOptions button{
   font: 400 14px Open Sans, sans-serif;
@@ -238,4 +250,9 @@
 .containerBody .centerBody .publications .publicationReaction i p{
   text-align: center;
   font: 400 12px Open Sans, sans-serif;
+}
+
+input[type=file]{
+  width: 0px;
+  color:transparent;
 }

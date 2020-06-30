@@ -55,17 +55,50 @@
 
     <content class="centerBody">
       <!-- Area publicação -->
-      <form class="publishingArea" id="publishingArea" action="post">
+      <form class="publishingArea" id="publishingArea" method="post">
         <textarea name="textPublication" id="textPublication" onInput="sizeTexPublicationArea()" cols="80" rows="10" placeholder="Escreva alguma coisa..."></textarea>
         <div class="publishingOptions">
           <div>
-            <i class="far fa-image"></i>
-            <i class="fas fa-video"></i>
-            <i class="fas fa-paperclip"></i>
+            <input type="file" id="file_images" accept="image/*" onchange="countFiles()" multiple />
+            <label for="file_images"><i class="far fa-image"></i></label>
+            <p id="count_file_images"></p>
+
+            <input type="file" id="file_video" accept="video/*" onchange="countFiles()" multiple />
+            <label for="file_video"><i class="fas fa-video"></i></label>
+            <p id="count_file_video"></p>
+
+            <input type="file" id="file_file" accept="file/*" onchange="countFiles()" multiple />
+            <label for="file_file"><i class="fas fa-paperclip"></i></label>
+            <p id="count_file_files"></p>
           </div>
           <button type="submit">Publicar</button>
         </div>
       </form>
+      <script>
+        function countFiles(){
+          var fileImages = document.getElementById('file_images').files;
+          if(fileImages.length > 0) {
+            document.getElementById('count_file_images').innerHTML = " "+ fileImages.length;
+          }else{
+            document.getElementById('count_file_images').innerHTML = "";
+          }
+
+          var fileVideo = document.getElementById('file_video').files;
+          if(fileVideo.length > 0) {
+            document.getElementById('count_file_video').innerHTML = " "+ fileVideo.length;
+          }else{
+            document.getElementById('count_file_video').innerHTML = "";
+          }
+
+          var fileFiles = document.getElementById('file_file').files;
+          if(fileFiles.length > 0) {
+            document.getElementById('count_file_files').innerHTML = " "+ fileFiles.length;
+          }else{
+            document.getElementById('count_file_files').innerHTML = "";
+          }
+
+        }
+      </script>
 
       <div class="publications">
         <div class="headerPublication">
