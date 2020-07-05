@@ -51,36 +51,45 @@ function teste(){
     setInterval(contagemRegressiva, 1000)
 }
 
-function verificaEntidade(){
-    var pessoaFisica = document.getElementById('pessoaFisica').checked
-    var pessoaJuridica = document.getElementById('pessoaJuridica').checked
-    var campoCNPJ = document.getElementById('campoCNPJ')
-    var razaoSocial = document.getElementById('razaoSocial')
-    var nomeFantasia = document.getElementById('nomeFantasia')
-    var nomeUser = document.getElementById('nomeUser')
+function verificaEntidade(selected){
 
-    if(pessoaJuridica == true){
+    var campoCNPJ = document.getElementById('campoCNPJ');
+    var razaoSocial = document.getElementById('razaoSocial');
+
+    if(selected == 'pf'){
+        document.getElementById('pessoaJuridica').checked = false;
+        document.getElementById('pessoaFisica').checked = true;
+        document.getElementById('pessoaJuridica').value = "";
+        document.getElementById('pessoaFisica').value = "1";
+    }else if(selected == 'pj'){
+        document.getElementById('pessoaFisica').checked = false;
+        document.getElementById('pessoaJuridica').checked = true;
+        document.getElementById('pessoaFisica').value = "";
+        document.getElementById('pessoaJuridica').value = "1";
+    }
+
+    if(selected == 'pj'){
         campoCNPJ.innerHTML =             
         `
-        <label for="campoCNPJ">Insira seu CNPJ</label>
-        <input type="text" name="campoCNPJ" class="form-control" >
+        <input type="text" placeholder="CNPJ" name="CNPJ" class="form-control" >
         `
         razaoSocial.innerHTML = 
         `
-        <label for="razaoSocial">Insira a razão social da sua empresa</label>
-        <input type="text" name="razaoSocial" class="form-control" > 
+        <input type="text" placeholder="Razão Social" name="companyName" class="form-control" > 
         `
-        nomeFantasia.innerHTML = 
-        `
-        <label for="nomeFantasia">Insira o nome fantasia da sua empresa</label>
-        <input type="text" name="nomeFantasia" class="form-control" >
-    
-        `
-    }else if(pessoaFisica == true){
+    }else if(selected == 'pf'){
         campoCNPJ.innerHTML = '';
         nomeFantasia.innerHTML = '';
         razaoSocial.innerHTML = '';
-        
     }
 }
 
+
+function validaCamposOpcao(e){
+    if(document.getElementById('pessoaJuridica').checked == false && document.getElementById('pessoaFisica') == false){
+        alert(`Selcione uma opção, 'Pessoa Fisica' ou 'Pessoa Juridica'`)
+        e.prevent.default()
+        return false 
+    }
+    return true;
+}

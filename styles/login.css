@@ -141,3 +141,9 @@
     margin-right: 2px;
     color: #000;
 }
+
+.content form .form-group input{
+    margin-top: 10px;
+    box-shadow: inset 1px 1px 7px 3px #e4e4e4;
+    width: 360px;
+}

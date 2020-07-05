@@ -1,3 +1,14 @@
+function fillForm(){
+  if(document.getElementById('fUser').value == ""){
+    alert("Você não preencheu o campo 'Usuário'");
+    return false;
+  }else if(document.getElementById('fPassword').value == ""){
+      alert("Você não preencheu o campo 'Senha'");
+      return false;
+    }
+  return true;
+}
+
 function sizeTexPublicationArea(){
   var textPublication = document.getElementById("textPublication");
   if(textPublication.value.length > 100 ){

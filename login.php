@@ -31,18 +31,7 @@
 		<video autoplay muted loop id="myVideo">
 			<source src="assets/videos/videoLogin.mp4" type="video/mp4">
 		</video>
-		<script>
-			function fillForm(){
-				if(document.getElementById('fUser').value == ""){
-					alert("Você não preencheu o campo 'Usuário'");
-					return false;
-				}else if(document.getElementById('fPassword').value == ""){
-						alert("Você não preencheu o campo 'Senha'");
-						return false;
-					}
-				return true;
-			}
-		</script>
 	</body>
+	<script src="js/interaction.js"></script>
 </html>
 
