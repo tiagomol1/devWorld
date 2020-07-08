@@ -42,12 +42,12 @@ function contagemRegressiva(){
     contagem.innerHTML = `<center>${numeroCinco}</center>`;
     numeroCinco = numeroCinco - 1
     if(numeroCinco == 0){
-        window.location.href = "http://localhost/faculdade/redeSocial/login.php";
+        window.location.href = "http://localhost/devWorld/login.php";
     }
 
 }
 
-function teste(){
+function chamaContagem(){
     setInterval(contagemRegressiva, 1000)
 }
 
@@ -71,11 +71,11 @@ function verificaEntidade(selected){
     if(selected == 'pj'){
         campoCNPJ.innerHTML =             
         `
-        <input type="text" placeholder="CNPJ" name="CNPJ" class="form-control" >
+        <input type="text" placeholder="CNPJ" name="CNPJ" class="form-control mt-3" >
         `
         razaoSocial.innerHTML = 
         `
-        <input type="text" placeholder="Razão Social" name="companyName" class="form-control" > 
+        <input type="text" placeholder="Razão Social" name="companyName" class="form-control mt-3" > 
         `
     }else if(selected == 'pf'){
         campoCNPJ.innerHTML = '';

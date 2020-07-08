@@ -1,6 +1,9 @@
 <?php
 include 'database/connection.php';
 
+
+
+
 $pf           = $_POST['pessoaFisica'];
 $pj           = $_POST['pessoaJuridica'];
 $fullname     = $_POST['fullname'];
@@ -8,6 +11,7 @@ $username     = $_POST['username'];
 $email        = $_POST['email'];
 $password1    = $_POST['password1'];
 $password2    = $_POST['password2'];
+
 
 if($email == '' || $password1 == '' || $password2 == ''){
     echo 'Nenhum dos campos pode estar vazio!';

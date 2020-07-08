@@ -30,11 +30,14 @@
     </div>
     <div class="menuSpaceBetweenNav">
       <nav>
+        <a href="groups/main.php"><i class="fas fa-users"></i></a>
         <a href="#"><i class="fas fa-trophy"></i></a>
         <a href="#"><i class="fas fa-briefcase"></i></a>
         <a href="#"><i class="fas fa-comments"></i></a>
         <a href="#"><i class="fas fa-file-code"></i></a>
         <a href="#"><img src="../assets/images/tiago.png" alt="" class="imagePerfil"></a>
+      
+
       </nav>
     </div>
   </header>

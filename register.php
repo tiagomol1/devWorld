@@ -21,10 +21,13 @@
     <a href="http://localhost/faculdade/redesocial"><i class="fas fa-arrow-left" styles="font-size: 30px; color: white;"></i></a>
     <div class="content">
         <h1>Seja um membro</h1>
+        <div class="card">
+            <div class="card-body">
+            
         <form method="POST" id="formCadastro" action="insertingUser.php" onsubmit="validaCamposOpcao()">
             <center>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="pessoaFisica" onclick="verificaEntidade('pf')" id="pessoaFisica">
+                    <input class="form-check-input" type="checkbox" name="pessoaFisica" onclick="verificaEntidade('pf')" id="pessoaFisica" checked>
                     <label class="form-check-label" for="inlineRadio1">Pessoa fisica</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -40,17 +43,18 @@
                 </div>
                 <div id="nomeFantasia">
                 </div>
-                <input type="email" name="email" placeholder="E-mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <input type="username" name="username" placeholder="Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <input type="password" onkeyup="validPass()" placeholder="Insira uma senha" class="form-control" id="password1" name="password1" required>
-                <input type="password" onkeyup="validPass()" placeholder="Repita a senha" class="form-control" id="password2" name="password2" required>
-            </div>
-            <center>
-                <div id="infoPass"></div>
-            </center>
-            <center>
+                <input type="email" name="email" placeholder="E-mail" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <input type="username" name="username" placeholder="Username" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <input type="password" onkeyup="validPass()" placeholder="Insira uma senha" class="form-control mt-3" id="password1" name="password1" required>
+                <input type="password" onkeyup="validPass()" placeholder="Repita a senha" class="form-control mt-3" id="password2" name="password2" required>
+                </div>
+                <center>
+                     <div id="infoPass"></div>
+                 </center>
                 <button type="submit" class="btn btn-primary">Cadastrar</button> <button onclick="validPass()" type="reset" class="btn btn-warning">Limpar</button>
-            </center>
+        </div>
+            </div>
+
         </form>
     </div>
 </body>

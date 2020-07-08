@@ -18,7 +18,7 @@
         <h1 id="bemVindo" class=display-4>Bem vindo amigo Dev </h1>
         <h1 id="underline">_</h1>
     </div>
-    <img id="gif" src="https://storage.googleapis.com/dpw/app/uploads/2019/04/quokka-visual-studio-code-javascript-extensoes-plugins.gif" width="500px"></img>
+    
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
