@@ -18,7 +18,7 @@
   <header>
     <div class="menuSpaceBetweenSearch">
       <div class="searchHeader">
-        <input type="text">
+        <input type="text" placeholder="Serch">
         <button><i class="fas fa-search"></i></button>
       </div>
     </div>  
@@ -30,7 +30,7 @@
     </div>
     <div class="menuSpaceBetweenNav">
       <nav>
-        <a href="groups/main.php"><i class="fas fa-users"></i></a>
+        <a href="groups/groups.php"><i class="fas fa-users"></i></a>
         <a href="#"><i class="fas fa-trophy"></i></a>
         <a href="#"><i class="fas fa-briefcase"></i></a>
         <a href="#"><i class="fas fa-comments"></i></a>
