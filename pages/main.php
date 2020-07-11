@@ -1,6 +1,14 @@
 <?php
 	include "../security/security.php";
   include "../database/connection.php"; //$connection, this is a var of connection.
+
+  $sql = "select posts.*, users.fullName, users.username from posts inner join users on users.id = posts.id_user order by posts.id desc";
+	$result = mysqli_query($connection, $sql);
+	
+	$postsList = array();
+	while ($post = mysqli_fetch_assoc($result)){
+		$postsList[] = $post;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +43,7 @@
         <a href="#"><i class="fas fa-briefcase"></i></a>
         <a href="#"><i class="fas fa-comments"></i></a>
         <a href="#"><i class="fas fa-file-code"></i></a>
-        <a href="#"><img src="../assets/images/tiago.png" alt="" class="imagePerfil"></a>
+        <a href="#"><img src="../assets/images/user.png" alt="" class="imagePerfil"></a>
       
 
       </nav>
@@ -77,58 +85,52 @@
           <button type="submit">Publicar</button>
         </div>
       </form>
-
-      <div class="publications">
-        <div class="headerPublication">
-          <img src="../assets/images/mauricio.jpg" alt="" class="imagePerfil">
-          <div>
-            <p class="publicationAuthor">Mauricio Nunes</p>
-            <p class="publicationDate">27/06/2020 às 19:00 hrs</p>
+      <?php foreach ($postsList as $post){ ?>
+        <div class="publications">
+          <div class="headerPublication">
+            <img src="../assets/images/user.png" alt="" class="imagePerfil">
+            <div>
+              <p class="publicationAuthor"><?php echo $post['fullName'];?></p>
+              <p class="publicationDate"><?php echo "(" . $post['username'] . ")    ". $post['date']; ?></p>
+            </div>
+          </div>
+          <div class="bodyPublication">
+            <div class="publicationText">
+              <p> <?php echo $post['text'];?> </p>
+            </div>
+            <div class="publicationImages">
+              <?php 
+               if( $post['image_file'] != "" || $post['video_file'] != "" || $post['document_file'] != ""){
+              ?>
+                <br/>
+                <?php if($post['image_file'] != ""){ ?>
+                  <img src="../publications/image<?php echo $post['image_file'];?>" width="550px">
+                <?php } ?>
+                <?php if($post['video_file'] != ""){ ?>
+                  <video width="550" height="320" style="margin-top: 5px" controls>
+                    <source src="../publications/video<?php echo $post['video_file'];?>" type="video/mp4">
+                  </video>
+                <?php } ?>
+                <?php if($post['document_file'] != ""){ ?>
+                  <div style="margin-top: 10px;">
+                    <a href="../publications/document<?php echo $post['document_file'];?>" download> 
+                      <i class="fa fa-download" aria-hidden="true"></i><?php echo " - ". $post['document_file'];?>
+                    </a>
+                  </div>
+                <?php } ?>
+              <?php
+               }
+              ?>
+            </div>
+            <hr />
+            <div class="publicationReaction">
+              <i class="fas fa-comment"><p>4</p></i>
+              <i class="fas fa-heart"><p>5</p></i>
+              <i class="fas fa-thumbs-up"><p>12</p></i>
+            </div>
           </div>
         </div>
-        <div class="bodyPublication">
-          <div class="publicationText">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-          </div>
-          <div class="publicationImages">
-            
-          </div>
-          <hr />
-          <div class="publicationReaction">
-            <i class="fas fa-comment"><p>4</p></i>
-            <i class="fas fa-heart"><p>5</p></i>
-            <i class="fas fa-thumbs-up"><p>12</p></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="publications">
-        <div class="headerPublication">
-          <img src="../assets/images/tiago.png" alt="" class="imagePerfil">
-          <div>
-            <p class="publicationAuthor">Tiago Murilo</p>
-            <p class="publicationDate">27/06/2020 às 12:00 hrs</p>
-          </div>
-        </div>
-        <div class="bodyPublication">
-          <div class="publicationText">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit corrupti et hic odit? Necessitatibus, iure? Itaque praesentium accusamus reprehenderit voluptas autem, voluptatum non dolorem suscipit mollitia facere! Saepe, est. Fugit.</p>
-          </div>
-          <div class="publicationImages">
-            <img src="" alt="">
-          </div>
-          <hr />
-          <div class="publicationReaction">
-            <i class="fas fa-comment"><p>2</p></i>
-            <i class="fas fa-heart"><p>5</p></i>
-            <i class="fas fa-thumbs-up"><p>10</p></i>
-          </div>
-        </div>
-      </div>
+      <?php }?>
 
     </content>
 

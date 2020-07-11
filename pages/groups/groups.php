@@ -24,14 +24,14 @@
       </div>
     </div>  
     <div class="menuSpaceBetweenImage">
-      <a href="main.php">
-        <img src="../assets/images/logo.png" alt="" width="80px">
+      <a href="../main.php">
+        <img src="../../assets/images/logo.png" alt="" width="80px">
         <p>DevWorld</p>
       </a>
     </div>
     <div class="menuSpaceBetweenNav">
       <nav>
-        
+        <a href="groups.php"><i class="fas fa-users"></i></a>
         <a href="#"><i class="fas fa-trophy"></i></a>
         <a href="#"><i class="fas fa-briefcase"></i></a>
         <a href="#"><i class="fas fa-comments"></i></a>
@@ -43,6 +43,6 @@
     </div>
   </header>
 
-  <a href="http://localhost/devworld/pages/groups/formgroups.php"><button class="btn btn-success mt-2" >Adicionar grupo</button></a>
+  <a href="http://localhost/faculdade/redeSocial/pages/groups/formgroups.php"><button class="btn btn-success mt-2" >Adicionar grupo</button></a>
   </body>
 </html>

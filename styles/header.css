@@ -12,6 +12,7 @@ header{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 20000;
 }
 
 header .menuSpaceBetweenNav{
@@ -93,5 +94,6 @@ header .menuSpaceBetweenImage a{
 
 header .menuSpaceBetweenImage p{
   color: white;
+  margin: 10px;
   font-size: 25px;
 }
